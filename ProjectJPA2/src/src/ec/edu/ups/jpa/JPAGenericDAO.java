@@ -49,6 +49,7 @@ public class JPAGenericDAO<T, ID> implements GenericDAO<T, ID> {
 
 	@Override
 	public void update(T entity) {
+		System.out.println("Actualizando.....");
 		em.getTransaction().begin();
 		try {
 			em.merge(entity);
