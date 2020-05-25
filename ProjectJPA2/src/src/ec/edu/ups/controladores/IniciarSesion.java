@@ -41,6 +41,12 @@ public class IniciarSesion extends HttpServlet {
 
 	}
 
+	/**
+	 *
+	 */
+	/**
+	 *
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
@@ -70,7 +76,7 @@ public class IniciarSesion extends HttpServlet {
 			correo = request.getParameter("correo");
 			contrasena = request.getParameter("contrasena");
 			user = usuarioDao.buscar(correo, contrasena);
-
+		//	System.out.print(user.getApellido()+user.getCorreo());
 		}
 
 		try {
@@ -78,20 +84,24 @@ public class IniciarSesion extends HttpServlet {
 				TelefonoDAO telefonoDao = DAOFactory.getFactory().getTelefonoDAO();
 				// System.out.println(telefonoDao.find().telf_id +','+ str.id_user
 				// +','+str.numero+','+str.tipo+','+str.operadora);
-
-				request.setAttribute("telefono", telefonoDao.buscarCedula(user.getId()));
-				request.setAttribute("usuario", user);
+				
+				  
+				  request.setAttribute("telefono", telefonoDao.buscarCedula(user.getCedula()));
+				  request.setAttribute("usuario", user);
+				 
 				getServletContext().getRequestDispatcher("/Privada/indexU.jsp").forward(request, response);
+			
 			} else {
 				// url="/Public/login.jsp";
-
 				getServletContext().getRequestDispatcher("/Public/login.jsp").forward(request, response);
 			}
 
-		} catch (Exception e) {
-
-			// TODO: handle exception
-		}
+			}catch (Exception e) {
+				// TODO: handle exception
+			}
+		
+	
+			
 
 	}
 

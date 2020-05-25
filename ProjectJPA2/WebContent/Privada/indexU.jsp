@@ -41,7 +41,7 @@
 			<div id="logo">
 				<span class="image avatar48"><img
 					src="/ProjectJPA2/config/images/avatar.jpg" alt="" /></span>
-				<h1 id="title">${p2.nombres} ${p2.apellidos}</h1>
+				<h1 id="title">${p2.nombre} ${p2.apellido}</h1>
 				<p>${p2.correo}</p>
 			</div>
 
@@ -120,9 +120,9 @@
 									<td>${telf.numero}
 									</td>
 									<td><a
-										href="/ProjectJPA2/EditarContacto?id=${telf.telf_id}&idUser=${p2.cedula}"
+										href="/ProjectJPA2/EditarContacto?id=${telf.id}&idUser=${p2.cedula}"
 										class="btn btn-warning">Editar</a> <a
-										href="/ProjectJPA2/EliminarContacto?id=${telf.telf_id}&idUser=${p2.cedula}"
+										href="/ProjectJPA2/EliminarContacto?id=${telf.id}&idUser=${p2.cedula}"
 										class="btn btn-danger">Eliminar</a></td>
 								</tr>
 

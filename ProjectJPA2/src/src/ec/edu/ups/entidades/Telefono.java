@@ -45,6 +45,8 @@ public class Telefono implements Serializable {
 		this.usuario = usuario;
 	}
 	
+
+	
 	public Telefono( String numero, String tipo, String operadora, Usuario usuario) {
 		super();
 		this.numero = numero;

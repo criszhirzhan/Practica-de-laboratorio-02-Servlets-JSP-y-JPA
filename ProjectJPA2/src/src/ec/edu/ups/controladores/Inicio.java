@@ -22,7 +22,6 @@ public class Inicio extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -36,7 +35,7 @@ public class Inicio extends HttpServlet {
 		sesion.setAttribute("accesos", sesion.getId());
 		
 		System.out.print("Sesion Inicio: "+sesion.getId());
-		System.out.print("JPA PROJECT");
+		System.out.print("...........JPA PROJECT........................");
 		getServletContext().getRequestDispatcher("/Public/index.html").forward(request, response);
 	}
 
