@@ -73,16 +73,17 @@ public class IndexController extends HttpServlet {
 		if (Integer.parseInt(request.getParameter("id")) == 3) {
 			System.out.print("Esta ingresando....");
 
-			request.setAttribute("telefono", telefonoDao.obtenerContacto());
+			request.setAttribute("telefono", telefonoDao.findAll());
 			getServletContext().getRequestDispatcher("/Privada/indexI.jsp").forward(request, response);
 
 		}
 		
 		if (Integer.parseInt(request.getParameter("id")) == 4) {
 			System.out.print("Esta ingresando....");
+			
 			usuario=usuarioDao.read(request.getParameter("idU"));
 			request.setAttribute("usuario", usuario);
-			request.setAttribute("telefono", telefonoDao.obtenerContacto());
+			request.setAttribute("telefono", telefonoDao.findAll());
 			getServletContext().getRequestDispatcher("/Privada/listTelf.jsp").forward(request, response);
 
 		}

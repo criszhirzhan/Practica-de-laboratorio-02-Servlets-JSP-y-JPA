@@ -108,7 +108,7 @@ public class Buscar extends HttpServlet {
 					
 					System.out.print("Cedula: " + request.getParameter("cedula"));
 					request.setAttribute("telefono", telefonoDao.buscarCedInv(request.getParameter("cedula")));
-					getServletContext().getRequestDispatcher("/Privada/indexI.jsp").forward(request, response);
+					getServletContext().getRequestDispatcher("/Privada/listTelf.jsp").forward(request, response);
 				}
 			} else {
 

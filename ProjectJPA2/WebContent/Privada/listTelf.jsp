@@ -40,7 +40,7 @@
 			<div id="logo">
 				<span class="image avatar48"><img
 					src="/ProjectJPA2/config/images/avatar.jpg" alt="" /></span>
-				<h1 id="title">${p2.nombres} ${p2.apellidos}</h1>
+				<h1 id="title">${p2.nombre} ${p2.apellido}</h1>
 				<p>${p2.correo}</p>
 			</div>
 
@@ -134,8 +134,8 @@
 
 							<c:forEach var="telf" items="${p1}">
 								<tr>
-									<td>${telf.nombres} ${telf.apellidos}</td>
-									<td>${telf.correo}       <a href="mailto:${telf.correo} "><img width="25px"
+									<td>${telf.usuario.nombre} ${telf.usuario.apellido}</td>
+									<td>${telf.usuario.correo}       <a href="mailto:${telf.usuario.correo} "><img width="25px"
 											height="25px"
 											src="https://img.icons8.com/flat_round/64/000000/secured-letter--v1.png" /></a></td>
 									<td>${telf.tipo}</td>

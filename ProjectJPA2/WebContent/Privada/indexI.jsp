@@ -111,12 +111,6 @@
 								placeholder="Buscar por cedula.....">
 						</div>
 					</form>
-
-
-
-
-
-
 					<br>
 					<table class="table table-bordered">
 						<thead>
@@ -132,8 +126,8 @@
 
 							<c:forEach var="telf" items="${p1}">
 								<tr>
-									<td>${telf.nombres} ${telf.apellidos}</td>
-									<td>${telf.correo}       <a href="mailto:${telf.correo} "><img width="25px"
+									<td>${telf.usuario.nombre} ${telf.usuario.apellido}</td>
+									<td>${telf.usuario.correo}       <a href="mailto:${telf.usuario.correo} "><img width="25px"
 											height="25px"
 											src="https://img.icons8.com/flat_round/64/000000/secured-letter--v1.png" /></a></td>
 									<td>${telf.tipo}</td>
@@ -143,7 +137,6 @@
 											src="https://img.icons8.com/ultraviolet/40/000000/phone.png" /></a>
 									</td>
 								</tr>
-
 							</c:forEach>
 						</tbody>
 					</table>

@@ -5,6 +5,7 @@
 		
 	<class>src.ec.edu.ups.entidades.Telefono</class>
 	<class>src.ec.edu.ups.entidades.Usuario</class>
+
 	
 		<properties>
 			<!-- <property name="eclipselink.ddl-generation" value="none" />	 -->		

@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import src.ec.edu.ups.entidades.Contacto;
 import src.ec.edu.ups.dao.UsuarioDAO;
 import src.ec.edu.ups.entidades.Usuario;
 
@@ -96,10 +95,5 @@ public class JPAUsuarioDAO extends JPAGenericDAO<Usuario, String> implements Usu
 		return list;
 	}
 
-	@Override
-	public List<Contacto> buscarCorreo(String correo) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

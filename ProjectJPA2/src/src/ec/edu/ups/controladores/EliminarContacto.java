@@ -47,9 +47,6 @@ public class EliminarContacto extends HttpServlet {
 		
 		try {
 			usuario=usuarioDao.read(id);
-			
-			
-			
 			request.setAttribute("usuario", usuario);
 			request.setAttribute("telefono", telefonoDao.buscarCedula(id));				
 			getServletContext().getRequestDispatcher("/Privada/indexU.jsp").forward(request, response);
