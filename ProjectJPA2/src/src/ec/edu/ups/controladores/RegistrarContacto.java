@@ -67,8 +67,7 @@ public class RegistrarContacto extends HttpServlet {
 			numero = request.getParameter("numerotxt");
 			tipo = request.getParameter("tip");
 			operadora = request.getParameter("operadoratxt");
-			user=usuarioDao.read("'"+request.getParameter("ced")+"'");
-			System.out.print(user +" "+tipo);
+			user=usuarioDao.read(request.getParameter("ced"));
 			
 			System.out.print("CEDULA:   "+request.getParameter("ced"));
 			telf = new Telefono( numero, tipo, operadora, user);
