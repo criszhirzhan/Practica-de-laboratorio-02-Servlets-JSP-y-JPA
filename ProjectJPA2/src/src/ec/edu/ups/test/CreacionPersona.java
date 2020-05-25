@@ -14,13 +14,11 @@ public class CreacionPersona {
 		// TODO Auto-generated method stub
 		
 		UsuarioDAO user = DAOFactory.getFactory().getUsuarioDAO();
-		Usuario usuario = new Usuario("0151027299", "Cris", "Cabrera", "cris@gmail.com", "123");
-		Usuario usuario2 = new Usuario("0161027299", "Juan","Perez","cjuan@gmail.com", "123");
-
-		user.create(usuario);
-		user.create(usuario2);
-		user.create(usuario);
-		System.out.println("Usuario Creado");
+		//Usuario usuario = null;
+		
+		//usuario=user.buscar("cris@gmail.com", "123");
+		
+		System.out.println(user.buscar("cris@gmail.com", "123").getApellido());
 
 	}
 

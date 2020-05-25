@@ -48,7 +48,8 @@ public class CrearUsuario extends HttpServlet {
 		Usuario user = new Usuario();
 		
 		String accion = request.getParameter("registrarUsr");
-		UsuarioDAO usuarioDao = DAOFactory.getFactory().getUsuarioDAO();
+	//	UsuarioDAO usuarioDao = DAOFactory.getFactory().getUsuarioDAO();
+		UsuarioDAO users = DAOFactory.getFactory().getUsuarioDAO();
 		
 		if (accion.equals("RegistrarUsr")) {
 			
@@ -60,7 +61,7 @@ public class CrearUsuario extends HttpServlet {
 			
 			user = new Usuario(cedula, nombres, apellidos, correo, passwd);
 			
-			usuarioDao.create(user);
+			users.create(user);
 			
 		}
 		

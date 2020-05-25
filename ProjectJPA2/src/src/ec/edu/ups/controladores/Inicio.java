@@ -37,7 +37,7 @@ public class Inicio extends HttpServlet {
 		
 		System.out.print("Sesion Inicio: "+sesion.getId());
 		System.out.print("JPA PROJECT");
-		getServletContext().getRequestDispatcher("/ProjectJPA2/Public/index.html").forward(request, response);
+		getServletContext().getRequestDispatcher("/Public/index.html").forward(request, response);
 	}
 
 	/**

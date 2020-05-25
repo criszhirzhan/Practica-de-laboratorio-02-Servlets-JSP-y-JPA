@@ -15,40 +15,36 @@ public class JPAUsuarioDAO extends JPAGenericDAO<Usuario, String> implements Usu
 		super(Usuario.class);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
 	public void createTable() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-
-	
-	@Override
-	public Usuario buscar(String email, String contrasena) {
-		/*
-		 * System.out.println("Email: ------------- "+email.toString()); int i=0;
-		 * Usuario usuarioObject = null; ResultSet rs =
-		 * conexionUno.query("SELECT * FROM Usuario WHERE  correo=" + "'" + email + "'"
-		 * + "AND contrasena=" + "'" + contrasena + "'" ); try { if (rs != null &&
-		 * rs.next()) { i=1; usuarioObject = new Usuario (rs.getString("cedula"),
-		 * rs.getString("nombre"), rs.getString("apellido"),rs.getString("correo"),
-		 * rs.getString("contrasena")); } } catch (SQLException e) {
-		 * System.out.println(">>>WARNING (JDBCUsuarioDAO:read): " + e.getMessage()); }
-		 * 
-		 * 
-		 * 
-		 * return usuarioObject;
-		 */
-		return null;
-	}
-	
-	
+	/*
+	 * @Override public Usuario buscar(String email, String contrasena) {
+	 * 
+	 * System.out.println("Email: ------------- "+email.toString()); int i=0;
+	 * Usuario usuarioObject = null; ResultSet rs =
+	 * conexionUno.query("SELECT * FROM Usuario WHERE  correo=" + "'" + email + "'"
+	 * + "AND contrasena=" + "'" + contrasena + "'" ); try { if (rs != null &&
+	 * rs.next()) { i=1; usuarioObject = new Usuario (rs.getString("cedula"),
+	 * rs.getString("nombre"), rs.getString("apellido"),rs.getString("correo"),
+	 * rs.getString("contrasena")); } } catch (SQLException e) {
+	 * System.out.println(">>>WARNING (JDBCUsuarioDAO:read): " + e.getMessage()); }
+	 * 
+	 * 
+	 * 
+	 * return usuarioObject;
+	 * 
+	 * return null; }
+	 */
 
 	@Override
 	public Usuario read(String id) {
 		// TODO Auto-generated method stub
-		
+
 		Usuario usuarioObject = null;
 		/*
 		 * ResultSet rs = conexionUno.query("SELECT * FROM Usuario WHERE cedula=" + id);
