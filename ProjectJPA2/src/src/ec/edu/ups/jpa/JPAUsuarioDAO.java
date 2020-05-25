@@ -41,22 +41,21 @@ public class JPAUsuarioDAO extends JPAGenericDAO<Usuario, String> implements Usu
 	 * return null; }
 	 */
 
-	@Override
-	public Usuario read(String id) {
-		// TODO Auto-generated method stub
-
-		Usuario usuarioObject = null;
-		/*
-		 * ResultSet rs = conexionUno.query("SELECT * FROM Usuario WHERE cedula=" + id);
-		 * try { if (rs != null && rs.next()) { usuarioObject = new Usuario
-		 * (rs.getString("cedula"), rs.getString("nombre"),
-		 * rs.getString("apellido"),rs.getString("correo"), rs.getString("contrasena"));
-		 * } } catch (SQLException e) {
-		 * System.out.println(">>>WARNING (JDBCUsuarioDAO:read): " + e.getMessage()); }
-		 */
-
-		return usuarioObject;
-	}
+	/*
+	 * @Override public Usuario read(String id) { // TODO Auto-generated method stub
+	 * 
+	 * Usuario usuarioObject = null;
+	 * 
+	 * ResultSet rs = conexionUno.query("SELECT * FROM Usuario WHERE cedula=" + id);
+	 * try { if (rs != null && rs.next()) { usuarioObject = new Usuario
+	 * (rs.getString("cedula"), rs.getString("nombre"),
+	 * rs.getString("apellido"),rs.getString("correo"), rs.getString("contrasena"));
+	 * } } catch (SQLException e) {
+	 * System.out.println(">>>WARNING (JDBCUsuarioDAO:read): " + e.getMessage()); }
+	 * 
+	 * 
+	 * return usuarioObject; }
+	 */
 
 	@Override
 	public void update(Usuario entity) {

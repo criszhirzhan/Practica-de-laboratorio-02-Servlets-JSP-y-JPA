@@ -56,7 +56,6 @@
 							class="icon solid fa-home">Cerrar sesion</span></a></li>
 				</ul>
 			</nav>
-
 		</div>
 
 		<div class="bottom">

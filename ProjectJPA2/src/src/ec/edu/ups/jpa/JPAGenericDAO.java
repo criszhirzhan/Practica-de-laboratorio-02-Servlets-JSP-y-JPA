@@ -43,6 +43,7 @@ public class JPAGenericDAO<T, ID> implements GenericDAO<T, ID> {
 
 	@Override
 	public T read(ID id) {
+		System.out.println("Buscando...");
 		return em.find(persistentClass, id);
 	}
 

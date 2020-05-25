@@ -40,7 +40,7 @@
 			<div id="logo">
 				<span class="image avatar48"><img
 					src="/ProjectJPA2/config/images/avatar.jpg" alt="" /></span>
-				<h1 id="title">${p1.nombres} ${p1.apellidos} </h1>
+				<h1 id="title">${p1.nombre} ${p1.apellido} </h1>
 				<p>${p1.correo}</p>
 			</div>
 

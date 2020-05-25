@@ -50,7 +50,8 @@ public class IndexController extends HttpServlet {
 
 			if (Integer.parseInt(request.getParameter("id")) == 1) {
 				usuario=usuarioDao.read(request.getParameter("c"));
-	                                          
+	             System.out.println("Cedula usar: "+request.getParameter("c"));
+	             System.out.println("Apellido user: "+usuario.getApellido());
 				request.setAttribute("idc", request.getParameter("c"));
 				request.setAttribute("usuario", usuario);
 				getServletContext().getRequestDispatcher("/Privada/registrar.jsp").forward(request, response);
