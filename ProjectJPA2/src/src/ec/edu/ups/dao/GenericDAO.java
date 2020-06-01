@@ -33,5 +33,9 @@ public interface GenericDAO<T ,ID> {
 
 	List<T> findAll();
 
+	List<T> find(String[] attributes, String[] values, String order, int index, int size);
+
+	public T buscar(String[] attributes, String[] values);
+
 
 }

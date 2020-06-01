@@ -19,21 +19,29 @@ public class CreacionPersona {
 		// TODO Auto-generated method stub
 		
 		UsuarioDAO user = DAOFactory.getFactory().getUsuarioDAO();
-		//Usuario usuario = null;
+		Usuario usuario = new Usuario();
 		
 		//usuario=user.buscar("cris@gmail.com", "123");
 		
-		System.out.println(user.buscar("cris@gmail.com", "123").getApellido());
-		TelefonoDAO telf = DAOFactory.getFactory().getTelefonoDAO();
-		List<Telefono> listT = new ArrayList<Telefono>();
+		String atributes[] = {"correo","pwd"};
+		String values[] = {"mayrarcentales@gmail.com","123"};
 		
-		Telefono telefono= new Telefono();
-		listT=telf.buscarCorreo("cris@gmail.com");
+		usuario=user.buscar(atributes,values);
 		
-		for (Telefono telfonoo : listT) {
-			 
-			 System.out.println(telfonoo.getUsuario().getNombre());
-		}
+		System.out.print(usuario.toString());
+		
+		
+		/*
+		 * System.out.println(user.buscar("cris@gmail.com", "123").getApellido());
+		 * TelefonoDAO telf = DAOFactory.getFactory().getTelefonoDAO(); List<Telefono>
+		 * listT = new ArrayList<Telefono>();
+		 * 
+		 * Telefono telefono= new Telefono(); listT=telf.buscarCorreo("cris@gmail.com");
+		 * 
+		 * for (Telefono telfonoo : listT) {
+		 * 
+		 * System.out.println(telfonoo.getUsuario().getNombre()); }
+		 */
 		//System.out.println("Imprimiendo apellido: "+listT.get(0).getUsuario().getApellido());
 	}
 }
